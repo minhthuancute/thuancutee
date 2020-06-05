@@ -1,0 +1,1891 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #363f4d;
+}
+
+a {
+	color: #363f4d;
+}
+
+.container {
+	max-width: 1400px;
+	margin: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+header {
+	padding: 5px 0;
+}
+
+header .container {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	width: 120px;
+}
+
+.navbar ul li {
+	margin-right: 30px;
+	transition: all 0.5s;
+}
+
+.navbar ul li>a {
+	transition: all 0.5s;
+}
+
+.navbar ul li>i {
+	transition: all 0.5s;
+	margin-left: 5px;
+	font-size: 12px;
+}
+
+.navbar ul li:hover>i, .navbar ul li:hover>a {
+	color: #c6263d;
+}
+
+.function {
+	align-items: center;
+}
+
+.search {
+	margin-right: 30px;
+}
+
+.search input {
+	padding: 5px 15px;
+	border-left: 0.8px solid #ccc7c7;
+	width: 250px;
+}
+
+.search input::placeholder {
+	color: #363f4d;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	transition: all 0.5s;
+}
+
+.search input:focus i {
+	color: #c6263d;
+}
+
+.search i {
+	transition: all 0.5s;
+}
+
+.search:hover input::placeholder {
+	color: rgba(54, 63, 77, 0.6);
+}
+
+.search:hover i {
+	color: #c6263d;
+}
+
+.user, .category {
+	position: relative;
+}
+
+.user p {
+	cursor: pointer;
+}
+
+.user .user-dropdown, .category .user-dropdown {
+	position: absolute;
+	padding: 15px;
+	left: -30%;
+	z-index: 99;
+	width: 170px;
+	box-shadow: 0px 1px 4px 4px rgba(128, 128, 128, 0.4);
+	background: white;
+	display: none;
+}
+
+.user .user-dropdown li form.search button {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #363f4d;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.user .user-dropdown li form.search button:hover {
+	color: #c6263d;
+}
+
+.user .user-dropdown li>a, .category .user-dropdown li>a {
+	transition: all 0.5s;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.user .user-dropdown li>a:hover, .category .user-dropdown li>a:hover {
+	cursor: pointer;
+	color: #c6263d;
+}
+
+.user .user-dropdown li:last-child a, .category .user-dropdown li:last-child a
+	{
+	margin-bottom: 0px;
+}
+
+.user:hover .user-dropdown, .category:hover .user-dropdown {
+	animation: fadedropdown 0.5s forwards;
+	display: block;
+}
+
+.category .user-dropdown {
+	width: 200px;
+}
+
+.login .user>a {
+	text-decoration: underline;
+}
+
+.login i {
+	margin-left: 30px;
+}
+
+.login a {
+	transition: all 0.5s;
+}
+
+.login a:hover {
+	color: #c6263d;
+}
+
+/*dem cart*/
+.login {
+	position: relative;
+}
+
+.login .numbercard {
+	position: absolute;
+	right: -15px;
+	top: -6px;
+	color: white;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 50%;
+	background: #c6263d;
+}
+
+@
+keyframes fadedropdown { 0% {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1;
+transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:translateY(0px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: white;
+	z-index: 100;
+	border-bottom: 0.5px solid #eee;
+}
+
+.animation {
+	animation: fadeDown 0.5s forwards ease-in;
+}
+
+@
+keyframes fadeDown { 0% {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+100%{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1;
+transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:translateY
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+(0
+px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+);
+}
+}
+.modal-login {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(198, 38, 61, 0.2);
+	/*   display: none; */
+	z-index: 100;
+}
+
+.modal-login .formwrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-login .formwrapper form {
+	width: 600px;
+	background: white;
+	border-radius: 10px;
+	padding: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.4);
+}
+
+.modal-login .formwrapper form h2 {
+	color: #c6263d;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.modal-login .formwrapper form input::placeholder {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+
+.modal-login .formwrapper form .username, .modal-login .formwrapper form .password
+	{
+	margin-bottom: 35px;
+	width: 450px;
+	height: 20px;
+	border-bottom: 0.8px solid #363f4d;
+}
+
+.modal-login .formwrapper form .username i, .modal-login .formwrapper form .password i
+	{
+	margin-right: 20px;
+}
+
+.modal-login .formwrapper form .username span, .modal-login .formwrapper form .password span
+	{
+	font-size: 12px;
+	color: red;
+	font-style: italic;
+}
+
+.modal-login .formwrapper form .password {
+	margin-bottom: 20px;
+}
+
+.modal-login .formwrapper form .note {
+	color: red;
+}
+
+.modal-login .formwrapper form button {
+	font-size: 15px;
+	width: 75%;
+	padding: 10px;
+	background: #c6263d;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	transition: all 0.5s;
+	margin-bottom: 15px;
+}
+
+.modal-login .formwrapper form button:hover {
+	background: #363f4d;
+}
+
+.modal-login .formwrapper form .forgot {
+	width: 70%;
+	text-align: right;
+	font-size: 13px;
+	margin-bottom: 15px;
+	transition: all 0.5s;
+	color: #c6263d;
+}
+
+.modal-login .formwrapper form .forgot a {
+	transition: all 0.5s;
+	color: #c6263d;
+}
+
+.modal-login .formwrapper form .forgot a:hover {
+	font-weight: bold;
+}
+
+.modal-login .formwrapper form p span a {
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+.modal-login .formwrapper form p span a:hover {
+	color: #c6263d;
+	font-weight: bold;
+}
+
+.modal-register {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 98;
+}
+
+.changechange {
+	position: relative;
+	margin: 50px;
+	height: 68vh;
+}
+
+.modal-register .formwrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.changechange .formwrapper {
+	height: 70vh;
+}
+
+.modal-register .formwrapper form {
+	width: 600px;
+	background: white;
+	border-radius: 10px;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.6);
+}
+
+.changechange .formwrapper form {
+	width: 600px;
+	background: white;
+	border-radius: 10px;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 1px 4px 4px rgba(128, 128, 128, 0.6);
+}
+
+.changechange .formwrapper form input {
+	width: 100%;
+}
+
+.modal-register .formwrapper form .address span, .modal-register .formwrapper form .email span,
+	.modal-register .formwrapper form .name span, .modal-register .formwrapper form .birthday span,
+	.modal-register .formwrapper form .phone span, .modal-register .formwrapper form .username span,
+	.modal-register .formwrapper form .password span {
+	font-size: 12px;
+	color: red;
+	font-style: italic;
+}
+
+.modal-register .formwrapper form i.fa-times-circle {
+	width: 100%;
+	text-align: right;
+	font-size: 20px;
+	transition: all 0.5s;
+}
+
+.modal-register .formwrapper form i.fa-times-circle:hover {
+	color: #c6263d;
+}
+
+.modal-register .formwrapper form h2 {
+	color: #c6263d;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.modal-register .formwrapper form input {
+	width: 400px;
+}
+
+.adminchange .formwrapper form input {
+	width: 100%;
+}
+
+.modal-register .formwrapper form input::placeholder {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+
+.modal-register .formwrapper form .address, .modal-register .formwrapper form .email,
+	.modal-register .formwrapper form .name, .modal-register .formwrapper form .birthday,
+	.modal-register .formwrapper form .phone, .modal-register .formwrapper form .username,
+	.modal-register .formwrapper form .password {
+	margin-bottom: 30px;
+	width: 450px;
+	height: 20px;
+	border-bottom: 0.8px solid #363f4d;
+}
+
+.modal-register .formwrapper form .address i, .modal-register .formwrapper form .email i,
+	.modal-register .formwrapper form .name i, .modal-register .formwrapper form .birthday i,
+	.modal-register .formwrapper form .phone i, .modal-register .formwrapper form .username i,
+	.modal-register .formwrapper form .password i {
+	margin-right: 15px;
+}
+
+.modal-register .formwrapper form .sex {
+	margin-bottom: 30px;
+	width: 450px;
+	height: 20px;
+}
+
+.modal-register .formwrapper form .sex .title {
+	border-bottom: 0.8px solid #363f4d;
+	width: 110px;
+}
+
+.modal-register .formwrapper form .sex label {
+	margin-right: 20px;
+}
+
+.modal-register .formwrapper form .sex label input {
+	width: 50px;
+}
+
+.modal-register .formwrapper form .sex i {
+	margin-right: 15px;
+}
+
+.modal-register .formwrapper form button {
+	font-size: 15px;
+	width: 75%;
+	padding: 10px;
+	background: #c6263d;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	transition: all 0.5s;
+	margin-bottom: 15px;
+}
+
+.modal-register .formwrapper form button:hover {
+	background: #363f4d;
+}
+
+.modal-register .formwrapper form .create-bottom {
+	width: 450px;
+	justify-content: space-between;
+}
+
+.modal-register .formwrapper form .create-bottom a {
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+.modal-register .formwrapper form .create-bottom a:hover {
+	color: #c6263d;
+	font-weight: bold;
+}
+
+.item {
+	height: 640px;
+	overflow: hidden;
+}
+
+.item img {
+	width: 100%;
+}
+
+.slider {
+	position: relative;
+}
+
+.slider .owl-nav {
+	position: absolute;
+	justify-content: space-between;
+	width: 98%;
+	left: 1%;
+	top: 45%;
+	display: none;
+}
+
+.slider .owl-nav i {
+	padding: 16px 18px;
+	border-radius: 50%;
+	background: white;
+	transition: all 0.25s ease-in;
+}
+
+.slider .owl-nav i:hover {
+	background: #c6263d;
+	color: white;
+}
+
+.slider:hover .owl-nav {
+	animation: fadeup 1s forwards;
+	display: flex;
+}
+
+.slider .owl-dots {
+	position: absolute;
+	left: 45%;
+	bottom: 10px;
+}
+
+.slider .owl-dots button.owl-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+	margin-right: 8px;
+	transition: all 0.5s;
+}
+
+.slider .owl-dots button.owl-dot.active {
+	width: 30px;
+	border-radius: 15px;
+	background: #c6263d;
+}
+
+@
+keyframes fadeup { 0% {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+100%{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+1;
+transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:translateY(0px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+.part1 h2, .part2 h2, .part3 h2, .part4 h2 {
+	margin-top: 50px;
+}
+
+/* product */
+.content {
+	justify-content: space-between;
+}
+
+.content-left {
+	width: 12%;
+	margin-top: 30px;
+}
+
+.content-left ul li {
+	margin-bottom: 15px;
+	padding-bottom: 8px;
+	border-bottom: solid 0.7px #eee;
+}
+
+.content-left ul li a {
+	transition: all 0.5s;
+}
+
+.content-left ul li:hover a {
+	color: #c6263d;
+}
+
+.content-right {
+	width: 85%;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+.prd-1 {
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.search-product {
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+.product {
+	position: relative;
+	width: 308px;
+	height: 380px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+	margin-right: 35px;
+	flex-wrap: wrap;
+}
+
+.pr {
+	width: 260px;
+	height: 332px;
+	margin-right: 20px;
+}
+
+.product img {
+	width: 308px;
+	height: 380px;
+}
+
+.pr img {
+	width: 260px;
+	height: 332px;
+	margin-right: 20px;
+}
+
+.product img.first:hover {
+	opacity: 0;
+}
+
+.product img.second {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.product .info {
+	position: absolute;
+	left: 0;
+	bottom: -57px;
+	width: 100%;
+}
+
+.product .info .buy {
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
+	background: rgba(255, 255, 255, 0.8);
+	padding-top: 20px;
+	display: none;
+}
+
+.product .info .buy .color {
+	margin-bottom: 10px;
+}
+
+.product .info .buy .color input[type=radio]#white::before {
+	border: 0.5px solid black;
+	background: white;
+}
+
+.product .info .buy .color input[type=radio]#red::before {
+	background: red;
+}
+
+.product .info .buy .color input[type=radio]#black::before {
+	background: black;
+}
+
+.product .info .buy .color input[type=radio]#blue::before {
+	background: #77c1ec;
+}
+
+.product .info .buy .color input[type=radio]#darkblue::before {
+	background: blue;
+}
+
+.product .info .buy .color input[type=radio]#gray::before {
+	background: gray;
+}
+
+.product .info .buy .color input[type=radio]#pink::before {
+	background: pink;
+}
+
+.product .info .buy .color input[type=radio]#yellow::before {
+	background: yellow;
+}
+
+.product .info .buy .color input[type=radio]#orange::before {
+	background: orange;
+}
+
+.product .info .buy .color input[type=radio]#darkgray::before {
+	background: #494747;
+}
+
+.product .info .buy .color input[type=radio]#green::before {
+	background: #0a9e0a;
+}
+
+.product .info .buy .color input[type=radio] {
+	position: relative;
+	margin-right: 10px;
+}
+
+.product .info .buy .color input[type=radio]:hover {
+	cursor: pointer;
+}
+
+.product .info .buy .color input[type=radio]:checked::before {
+	transform: scale(0.85);
+}
+
+.product .info .buy .color input[type=radio]::before {
+	content: '';
+	width: 15px;
+	height: 15px;
+	left: -0.8px;
+	top: -0.8px;
+	position: absolute;
+	border-radius: 58%;
+	transition: all 0.5s;
+	display: block;
+}
+
+.product .info .buy .size {
+	margin-bottom: 10px;
+}
+
+.product .info .buy .size label {
+	position: relative;
+	margin-right: 10px;
+}
+
+.product .info .buy .size span {
+	margin-right: 10px;
+	/* position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0; */
+}
+
+.product .info .buy .size span.S {
+	left: 4px;
+}
+
+.product .info .buy .size span.XXS {
+	left: -20px;
+}
+
+.product .info .buy .size input[type=radio] {
+	/* 	opacity: 0; */
+	z-index: 11;
+}
+
+.product .info .buy .size input[type=radio]:checked ~ span {
+	color: #c6263d;
+	font-weight: bold;
+}
+
+.product .info .buy .size span:hover {
+	cursor: pointer;
+}
+
+.product .info .buy .choose {
+	border-radius: 2px;
+	width: 100%;
+	background: #c6263d;
+	text-align: center;
+	transition: all 0.5s;
+}
+
+.product .info .buy .choose button {
+	padding: 10px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.product .info .buy .choose button:hover {
+	cursor: pointer;
+}
+
+.product .info .buy .choose:hover {
+	background: rgba(198, 38, 61, 0.8);
+}
+
+.product .info p {
+	margin-top: 10px;
+}
+
+.product .info:hover .buy {
+	animation: fadeupup 1s forwards;
+	display: flex;
+}
+
+.discount {
+	background: rgba(238, 238, 238, 0.5);
+	margin: 50px 0;
+}
+
+.discount .container {
+	justify-content: space-between;
+	align-items: center;
+	padding: 50px 100px;
+}
+
+.discount .container .discount1, .discount .container .discount2,
+	.discount .container .discount3 {
+	align-items: center;
+}
+
+.discount .container .discount1 i, .discount .container .discount2 i,
+	.discount .container .discount3 i {
+	font-size: 50px;
+	color: #c6263d;
+	margin-right: 15px;
+}
+
+.discount .container .discount1 h6, .discount .container .discount2 h6,
+	.discount .container .discount3 h6 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.discount .container .discount1 p, .discount .container .discount2 p,
+	.discount .container .discount3 p {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.up {
+	right: 10px;
+	bottom: 30px;
+	display: none;
+}
+
+.up i {
+	padding: 13px;
+	background: #eee;
+	border-radius: 50%;
+	transition: all 0.5s;
+}
+
+.up i:hover {
+	background: #c6263d;
+	color: white;
+}
+
+.appear {
+	display: block;
+	position: fixed;
+}
+
+.last {
+	background: rgba(238, 238, 238, 0.5);
+}
+
+.last .container {
+	padding: 50px 0;
+}
+
+.last h4 {
+	margin-bottom: 5px;
+	text-align: center;
+	color: #c6263d;
+	font-size: 16px;
+}
+
+.last p {
+	font-weight: 600;
+}
+
+.last p span {
+	margin-left: 10px;
+	font-weight: 500;
+}
+
+.last ul {
+	border-top: 0.5px solid rgba(128, 128, 128, 0.4);
+	padding-top: 10px;
+	justify-content: space-between;
+}
+
+.picture {
+	margin: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.picture .image {
+	height: 700px;
+	width: 1400px;
+	overflow: hidden;
+}
+
+.picture .image img {
+	height: 700px;
+	width: 1400px;
+	transition: all 0.5s;
+}
+
+.picture .image img:hover {
+	transform: scale(1.5);
+}
+
+////////////////////////////////////////////
+.detail {
+	justify-content: space-between;
+}
+
+.left {
+	margin: 50px 20px;
+}
+
+.left .image1, .left .image2, .left .image3 {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 387px;
+	height: 480px;
+}
+
+.right {
+	margin: 50px 0 70px 0;
+	width: 500px;
+}
+
+.right .info {
+	text-align: center;
+}
+
+/* /////////////////////// */
+.right .buy .color input[type=radio]#white::before {
+	border: 0.5px solid black;
+	background: white;
+}
+
+.right .buy .color input[type=radio]#red::before {
+	background: red;
+}
+
+.right .buy .color input[type=radio]#black::before {
+	background: black;
+}
+
+.right .buy .color input[type=radio]#blue::before {
+	background: #77c1ec;
+}
+
+.right .buy .color input[type=radio]#darkblue::before {
+	background: blue;
+}
+
+.right .buy .color input[type=radio]#gray::before {
+	background: gray;
+}
+
+.right .buy .color input[type=radio]#pink::before {
+	background: pink;
+}
+
+.right .buy .color input[type=radio]#yellow::before {
+	background: yellow;
+}
+
+.right .buy .color input[type=radio]#orange::before {
+	background: orange;
+}
+
+.right .buy .color input[type=radio]#darkgray::before {
+	background: #494747;
+}
+
+.right .buy .color input[type=radio]#green::before {
+	background: #0a9e0a;
+}
+
+.right .buy .color input[type=radio] {
+	position: relative;
+	margin-right: 25px;
+}
+
+.right .buy .color input[type=radio] ~ span {
+	position: absolute;
+	left: 75%;
+	top: 23%;
+}
+
+.right .buy .color input[type=radio]:checked::before {
+	transform: scale(0.85);
+}
+
+.right .buy .color input[type=radio]::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	left: -2.5px;
+	top: -6px;
+	position: absolute;
+	border-radius: 58%;
+	transition: all 0.5s;
+	display: block;
+}
+
+.right .buy .size {
+	margin-bottom: 10px;
+	justify-content: center;
+}
+
+.right .buy .size label {
+	position: relative;
+	margin-right: 10px;
+}
+
+.right .buy .size span {
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* .right .buy .size span.S {
+	left: 4px;
+} */
+/* .right .buy .size span.XXS {
+	left: -20px;
+} */
+
+.right .buy .size input[type=radio] {
+	margin-right: 20px;
+	position: relative;
+	opacity: 0;
+}
+
+.right .buy .size span:hover {
+	cursor: pointer;
+}
+
+.right .buy .size input[type=radio]:checked ~ span {
+	color: #c6263d;
+}
+
+.right .buy {
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
+	background: rgba(255, 255, 255, 0.8);
+	padding-top: 20px;
+}
+
+.right .buy .color {
+	margin-top: 20px;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+/* .right .buy .color .black, .right .buy .color .red, .right .buy .color .blue,
+	.right .buy .color .darkblue, .right .buy .color .white, .right .buy .color .gray,
+	.right .buy .color .pink, .right .buy .color .yellow, .right .buy .color .orange,
+	.right .buy .color .darkgray, .right .buy .color .green {
+	width: 18px;
+	height: 18px;
+	border-radius: 58%;
+	margin-right: 10px;
+	transition: all 0.5s;
+	height: 18px;
+} */
+.right .buy .color .black:hover, .right .buy .color .red:hover, .right .buy .color .blue:hover,
+	.right .buy .color .darkblue:hover, .right .buy .color .gray:hover,
+	.right .buy .color .pink:hover, .right .buy .color .yellow:hover,
+	.right .buy .color .orange:hover, .right .buy .color .darkgray:hover,
+	.right .buy .color .green:hover {
+	cursor: pointer;
+	border: 1px solid white;
+}
+
+.right .buy .color span {
+	opacity: 0;
+}
+
+.right .buy .color input[type=radio]:checked ~ span {
+	opacity: 1;
+}
+
+/* .right .buy .color .white:hover {
+	cursor: pointer;
+	border: 2px solid black;
+}
+
+.right .buy .color .red {
+	background: red;
+}
+
+.right .buy .color .black {
+	background: black;
+}
+
+.right .buy .color .blue {
+	background: #77c1ec;
+}
+
+.right .buy .color .darkblue {
+	background: blue;
+}
+
+.right .buy .color .white {
+	background: white;
+	border: solid 1px black;
+}
+
+.right .buy .color .gray {
+	background: gray;
+}
+
+.right .buy .color .pink {
+	background: pink;
+}
+
+.right .buy .color .yellow {
+	background: yellow;
+}
+
+.right .buy .color .orange {
+	background: orange;
+}
+
+.right .buy .color .darkgray {
+	background: #494747;
+}
+
+.right .buy .color .green {
+	background: #0a9e0a;
+}
+
+.right .buy .size {
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.right .buy .size p {
+	margin: 0 15px 10px 0;
+	transition: all 0.5s;
+} */
+.right .buy .size p:hover {
+	cursor: pointer;
+	color: #c6263d;
+	font-weight: bold;
+}
+
+.right .buy .choose {
+	border-radius: 5px;
+	width: 100%;
+	background: #c6263d;
+	text-align: center;
+	transition: all 0.5s;
+	margin-bottom: 30px;
+}
+
+.right .buy .choose button {
+	padding: 15px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.right .buy .choose:hover {
+	background: #363f4d;
+}
+
+.right h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.right h3 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.right h5, .right p.distribute {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+/* gio hang */
+.carts {
+	justify-content: space-between;
+	margin-bottom: 380px;
+}
+
+.carts .info-product {
+	justify-content: space-between;
+	border-radius: 5px;
+	padding: 20px 30px;
+	background: #f3f3f3;
+	width: 1000px;
+	margin-bottom: 20px;
+}
+
+.carts .info-product img {
+	width: 120px;
+	height: 150px;
+	margin-right: 30px;
+	float: left;
+}
+
+.carts .info-product .info-product-1 {
+	width: 500px;
+}
+
+.carts .info-product .delete {
+	margin: 30px 0;
+}
+
+.carts .info-product .delete i {
+	font-size: 22px;
+	transition: all 0.5s;
+}
+
+.carts .info-product .delete:hover i {
+	color: #c6263d;
+}
+
+.carts .info-product .quantity {
+	align-content: center;
+	height: 30px;
+}
+
+.carts .info-product .quantity .soluong {
+	width: 80px;
+	border: solid 1px #c6263d;
+	padding: 3px 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.carts .info-product .quantity a {
+	font-size: 20px;
+	border: solid 1px #c6263d;
+	padding: 3px 15px;
+	transition: all 0.5s;
+}
+
+.carts .info-product .quantity button:hover {
+	background: #e6e6e6;
+}
+
+.carts .info-product .quantity button.add {
+	padding: 3px 13px;
+}
+
+.carts .info-product h4, .carts .info-product p {
+	margin: 15px 0;
+}
+
+.carts .into-money {
+	width: 350px;
+	margin-top: 30px;
+	height: 100px;
+}
+
+.carts .into-money .click i.fa-hand-point-right {
+	font-size: 20px;
+	margin-right: 10px;
+	color: #c6263d;
+	margin-top: 15px;
+}
+
+.carts .into-money .click a {
+	font-size: 18px;
+	font-weight: bold;
+	transition: all 0.5s;
+	margin-top: 15px;
+}
+
+.carts .into-money .click:hover a {
+	color: #c6263d;
+}
+
+.carts .into-money i.fa-cart-plus {
+	font-size: 100px;
+	margin-top: 120px;
+	color: #c6263d;
+}
+
+.carts .into-money a.pay {
+	border-radius: 5px;
+	width: 100%;
+	background: #c6263d;
+	text-align: center;
+	transition: all 0.5s;
+	margin-top: 20px;
+	padding: 10px 15px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.carts .into-money a.pay:hover {
+	background: #363f4d;
+}
+
+.carts .into-money .into-money-under .label {
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+/*gio hang neu rong*/
+.cartss {
+	margin-bottom: 220px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cartss .click i.fa-hand-point-right {
+	font-size: 20px;
+	margin-right: 10px;
+	color: #c6263d;
+}
+
+.cartss .click a {
+	font-size: 20px;
+	font-weight: bold;
+	transition: all 0.5s;
+}
+
+.cartss .click:hover a {
+	color: #c6263d;
+}
+
+.cartss i.fa-cart-plus {
+	font-size: 100px;
+	margin-top: 120px;
+	color: #c6263d;
+}
+
+.cartss p {
+	margin-bottom: 10px;
+}
+
+.infomation {
+	/* 	margin: 50px 100px 20px 100px; */
+	padding: 20px 50px;
+	border-radius: 5px;
+	background: #f3f3f3;
+}
+
+.infomation>.left {
+	width: 300px;
+}
+
+.change {
+	/* padding: 0px 30px 50px 30px; */
+	margin-top: 50px;
+	margin-bottom: 40px;
+	justify-content: space-between;
+}
+
+.change>.item {
+	padding: 30px;
+	flex-direction: column;
+	width: 420px;
+	height: 280px;
+	text-align: center;
+	border-radius: 5px;
+	background: #f3f3f3;
+}
+
+.change>.item>i {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #c6263d;
+}
+
+.change>.item h3 {
+	margin-bottom: 30px;
+}
+
+.change>.item p.mk {
+	margin-bottom: 20px;
+}
+
+.change>.item a {
+	margin-top: 20px;
+	border-radius: 5px;
+	width: 100%;
+	background: #363f4d;
+	text-align: center;
+	transition: all 0.5s;
+	margin-bottom: 30px;
+	padding: 15px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.change>.item a:hover {
+	background: #c6263d;
+}
+
+/*bill*/
+.contain-under {
+	padding: 50px 0 25px 0;
+	justify-content: space-between;
+}
+
+.contain-under h2 {
+	text-align: center;
+	color: #c6263d;
+}
+
+.contain-under .info-user {
+	border-radius: 5px;
+	background: #f3f3f3;
+	padding: 40px;
+	height: 300px;
+}
+
+.contain-under .billchange-bottom {
+	margin-top: 20px;
+}
+
+.contain-under .billchange-bottom-left {
+	margin: 0px 20px 10px 0;
+}
+
+.contain-under .billchange-bottom-left>div {
+	margin-bottom: 18px;
+}
+
+.contain-under button.edit {
+	float: right;
+	margin-bottom: 0;
+	color: #c6263d;
+	transition: all 0.5s;
+}
+
+.contain-under button.edit:hover {
+	font-weight: bold;
+}
+
+.contain-under .billchange-bottom-right>input {
+	display: block;
+	border: 1px solid #c6263d;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	padding: 5px;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	width: 500px;
+}
+
+.contain-under .info-product {
+	width: 600px;
+	border-radius: 5px;
+	background: #f3f3f3;
+	padding: 40px;
+}
+
+.contain-under .info-product img {
+	width: 120px;
+	height: 150px;
+	margin-right: 50px;
+}
+
+.contain-under .info-product .info-product-bottom {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 0.5px solid gray;
+}
+
+.contain-under .info-product .info-product-bottom h4 {
+	margin-bottom: 12px;
+}
+
+.contain-under .info-product .info-product-bottom .info-title {
+	margin-right: 80px;
+}
+
+.contain-under .info-product .info-product-bottom p {
+	margin-bottom: 8px;
+}
+
+.contain-under .pay {
+	margin-top: 30px;
+}
+
+.contain-under h4.pay-right {
+	margin-left: 34px;
+}
+
+.contain .contain-bottom {
+	text-align: right;
+}
+
+.contain .contain-bottom button.order {
+	justify-items: center;
+	width: 600px;
+	background: #c6263d;
+	padding: 10px;
+	font-size: 16px;
+	color: white;
+	border-radius: 5px;
+	transition: all 0.5s;
+	margin-bottom: 50px;
+}
+
+.contain .contain-bottom button.order:hover {
+	background: #363f4d;
+}
+
+/* laguagesub */
+.laguagesub {
+	margin-left: 1230px;
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.laguagesub a.vi, .laguagesub a.en {
+	padding: 5px 10px;
+	background: #363f4d;
+	border-radius: 3px;
+	color: white;
+	position: relative;
+}
+
+.laguagesub a.vi p, .laguagesub a.en p {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	z-index: 30;
+}
+
+.laguagesub a.vi::after, .laguagesub a.en::after {
+	content: '';
+	width: 0%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	border-radius: 3px;
+	background: #c6263d;
+	display: block;
+	transition: all 0.5s;
+}
+
+.laguagesub a.vi:hover p, .laguagesub a.en:hover p {
+	color: white;
+	z-index: 30;
+}
+
+.laguagesub a.vi:hover:after, .laguagesub a.en:hover:after {
+	width: 100%;
+}
+
+.laguagesub a.en {
+	background: #c6263d;
+}
+
+.laguagesub a.en::after {
+	background: #363f4d;
+}
+
+/*gioi thieu*/
+.container div.intro{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.container div.intro p{
+	margin-bottom: 15px;
+	line-height: 25px;
+}
+
+.container div.intro p span{
+	color: #c6263d;
+}
+
+.container div.intro div.send{
+	margin-left: 50px;
+	margin-top: 20px;
+	width: 600px;
+	justify-content: space-between;
+}
+
+.container div.intro div.sendMail{
+	width: 1380px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container div.intro div.send input{
+	padding: 15px 30px;
+	background: #c0c0c0;
+	width: 100%;
+}
+
+.container div.intro div.send input::placeholder{
+	font-size: 16px;
+	font-style: italic;
+	color: white;
+}
+
+.container div.intro div.send i{
+	padding: 15px 30px;
+	background: #363f4d;
+	color: white;
+	transition: all 0.5s;
+}
+
+.container div.intro div.send i:hover{
+	background: #c6263d;
+	cursor: pointer;
+}
+
+/*xem hoa don*/
+.carts .billProduct{
+	background: #f3f3f3;
+	margin-bottom: 50px;
+	align-items: center;
+}
+
+.carts .billProduct .info-product {
+	margin-bottom: 0px;
+}
+
+.carts .billProduct .delete a{
+	margin-right: 20px;
+	padding: 10px 20px;
+	background: #363f4d;
+	color: white;
+	transition: all 0.5s;
+}
+
+.carts .billProduct .delete a:hover{
+	background: #c6263d;
+}
+
+.carts .billProduct .info-product .quantity .soluong {
+	border: none;
+	padding: 0;
+	text-align: left;
+}
+
+.bills{
+	margin-bottom: 50px;
+	max-width: 1170px;
+}
+
+/*admin home*/
+
+.admin{
+	flex-wrap: wrap;
+	max-width: 1100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+a.manage{
+	width: 500px;
+	height: 200px;
+	background: #363f4d;
+	margin-bottom: 30px;
+	margin-right: 30px;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	padding-top: 80px;
+	font-size: 30px;
+	transition: all 0.5s;
+}
+a.manage:hover{
+	text-decoration: none;
+	background: #c6263d;
+}
+
+/* .modal-register .formwrapper form .editPr img{
+	width: 10%;
+} */
+
